@@ -3,175 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wednesday Menu - Zazon Mexican Food</title>
+  <title>Menu - Thursday Jan 22, 2026</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.5;
+      color: #333;
       max-width: 800px;
       margin: 0 auto;
-      padding: 20px 15px;
-      background-color: #fffef7;
-      color: #2d1e12;
+      padding: 20px;
+      background-color: #fffaf0;
     }
     header {
       text-align: center;
-      padding: 20px 0 30px;
-      border-bottom: 2px dashed #c2410c;
+      padding: 20px 0;
+      background: #c0392b;
+      color: white;
+      border-radius: 8px 8px 0 0;
     }
-    h1 {
-      color: #9a3412;
-      margin: 0;
-      font-size: 2.4rem;
+    h1, h2 {
+      margin: 0.4em 0;
     }
-    h2 {
-      color: #c2410c;
-      margin: 35px 0 15px;
-      font-size: 1.8rem;
-      border-left: 6px solid #f97316;
-      padding-left: 12px;
+    .highlight {
+      color: #c0392b;
+      font-weight: bold;
+    }
+    .section {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .item {
-      margin-bottom: 28px;
-    }
-    .item-name {
-      font-weight: bold;
-      font-size: 1.25rem;
-      color: #431407;
-    }
-    .price {
-      color: #ea580c;
-      font-weight: bold;
-      margin-left: 8px;
-    }
-    .description {
-      margin: 4px 0 8px;
-      color: #444;
-    }
-    ul.options {
-      margin: 6px 0 6px 20px;
-      padding-left: 0;
-      list-style: none;
-    }
-    ul.options li {
-      margin-bottom: 4px;
-      position: relative;
+      margin: 12px 0;
       padding-left: 20px;
+      position: relative;
     }
-    ul.options li::before {
+    .item::before {
       content: "•";
       position: absolute;
       left: 0;
-      color: #f97316;
+      color: #c0392b;
     }
-    .highlight {
-      color: #ea580c;
+    .price {
+      float: right;
       font-weight: bold;
+      color: #27ae60;
     }
-    .small {
-      font-size: 0.95rem;
-      color: #555;
-    }
-    .add-ons {
+    .note {
       font-style: italic;
-      color: #666;
+      color: #555;
+      font-size: 0.95em;
+    }
+    .popular {
+      background: #fffacd;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      margin-left: 8px;
     }
     footer {
-      margin-top: 50px;
       text-align: center;
-      font-size: 0.95rem;
-      color: #666;
-      padding: 20px 0;
-      border-top: 1px solid #ddd;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #777;
+    }
+    @media (max-width: 500px) {
+      body { padding: 12px; }
+      .price { float: none; display: block; margin-top: 4px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Menu for Wednesday 1/20/26</h1>
+    <h1>Daily Menu</h1>
+    <p>Thursday, January 22, 2026</p>
   </header>
 
-  <main>
+  <div class="section">
+    <h2>Business Hours</h2>
+    <p>8:00 AM – 2:00 PM  5:00 PM – 8:30 PM</p>
+  </div>
 
-    <section class="item">
-      <div class="item-name">Chilaquiles!! <span class="price">$12</span></div>
-      <div class="description">Red or Green</div>
-      <ul class="options">
-        <li>Rice, Beans, Cesina or 2 Eggs</li>
-      </ul>
-      <div class="small">*on side: onion, cheese, sour cream, lettuce optional*</div>
-    </section>
+  <div class="section">
+    <h2 class="highlight">New Dish!</h2>
+    <div class="item">
+      <strong>CHILES RELLENOS</strong> <span class="price">$15</span><br>
+      Poblano green chili stuffed with cheese, coated with egg batter and fried, served in tomato sauce.<br>
+      Includes: rice & beans + side of handmade tortillas
+    </div>
+  </div>
 
-    <section class="item">
-      <div class="item-name">Tortas! <span class="price">$10</span></div>
-      <div class="description">Light Mayo, Pinto Beans, Choice of Meat, Lettuce, Onion, Tomatoes, Avocado</div>
-      <ul class="options">
-        <li>Ham</li>
-        <li>Chorizo</li>
-        <li>Chicken</li>
-        <li>Asada</li>
-        <li>Al Pastor</li>
-      </ul>
-    </section>
+  <div class="section">
+    <h2>Main Items</h2>
+    <div class="item"><strong>Pambazos</strong> <span class="price">$8–10</span></div>
+    <div class="item"><strong>Tortas</strong> <span class="price">$10</span></div>
+    <p class="note">All handmade!</p>
 
-    <section class="item">
-      <div class="item-name">Pambazos! 🔥 <span class="price">$8–$10</span></div>
-      <div class="description">Telera coated in guajillo salsa (lightly fried), inside Potato/Chorizo (Original) or choice of meat, shredded lettuce, sour cream, cheese and green salsa</div>
-      <ul class="options">
-        <li>Chorizo con Papa <span class="price">$10</span></li>
-        <li>Chorizo Only <span class="price">$12</span></li>
-        <li>Pollo <span class="price">$10</span></li>
-        <li>Asada <span class="price">$12</span></li>
-        <li>Al Pastor <span class="price">$10</span></li>
-      </ul>
-      <div class="add-ons">*add ons* fried pinto beans</div>
-    </section>
+    <h3>Tacos • Sopes • Quesadillas • Regular Tacos</h3>
+    <div class="item">Chorizo with Potato</div>
+    <div class="item">Chorizo</div>
+    <div class="item">Asada</div>
+    <div class="item">Chicken</div>
+    <div class="item">Al Pastor</div>
 
-    <section class="item">
-      <div class="item-name">Burritos! <span class="price">$10</span></div>
-      <div class="description">Flour Tortilla, orange Spanish rice, fried pinto beans, choice of meat, cilantro, onion and green or red salsa</div>
-      <div class="add-ons small">*add ons* Pico de Gallo, Oaxaca Cheese, Sour Cream, Powder Cotija Cheese, Lettuce</div>
-      <ul class="options">
-        <li>Chorizo</li>
-        <li>Chicken</li>
-        <li>Asada</li>
-        <li>Al Pastor</li>
-      </ul>
-    </section>
+    <h3>Fried Options <span class="popular">Popular!</span></h3>
+    <div class="item">Fried Tacos or Flautas</div>
+    <div class="item">Fried Quesadillas <span class="popular">Popular!</span></div>
+    <div class="item">— Chorizo / Potato</div>
+    <div class="item">— Chicken</div>
+  </div>
 
-    <h2>Handmade!</h2>
-
-    <section class="item">
-      <div class="item-name">Tacos <span class="price">$2 each</span> • Sopes <span class="price">4 for $15</span> • Quesadillas <span class="price">4 for $15</span></div>
-      <div class="small">Regular Tacos also available <span class="price">$1 each</span></div>
-      <ul class="options">
-        <li>Chorizo</li>
-        <li>Chicken</li>
-        <li>Asada</li>
-        <li>Al Pastor</li>
-      </ul>
-    </section>
-
-    <section class="item">
-      <div class="item-name highlight">Fried Tacos or Flautas (Popular Item) <span class="price">6 for $10</span></div>
-      <div class="item-name highlight">Quesadillas Fried (Popular Item) <span class="price">6 for $10</span></div>
-      <div>Chorizo/Potato or Chicken</div>
-    </section>
-
+  <div class="section">
     <h2>Drinks</h2>
-    <section class="item">
-      <ul class="options">
-        <li>Agua Fresca: Jamaica</li>
-        <li>Canned: Coke, Sprite, Squirt</li>
-      </ul>
-    </section>
+    <div class="item"><strong>Aguas Frescas</strong>: Jamaica, Cucumber/Lime</div>
+    <div class="item"><strong>Canned</strong>: Coke, Sprite, Squirt</div>
+  </div>
 
-  </main> 
+  <div class="section">
+    <h2>Ordering</h2>
+    <p><strong>Pick Up</strong> or <strong>Delivery</strong></p>
+    <p>Delivery windows: 9:00 AM–1:00 PM  5:30 PM–8:00 PM</p>
+    <p class="note">Let us know if you have any questions, concerns, or need accommodations!</p>
+  </div>
 
   <footer>
-    <p>Pick Up or Delivery (+$5)</p>
-    <p style="margin-top: 12px;">Let me know if you have any questions, concerns or need accommodations!</p>
+    <p>Website coming soon with weekly menu updates!</p>
   </footer>
 
 </body>
