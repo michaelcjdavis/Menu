@@ -7,43 +7,96 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.5;
-      color: #333;
+      line-height: 1.6;
+      color: #2d1e12;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      background-color: #fffaf0;  /* Soft orange-cream for Mexican vibe */
+      background-color: #fffaf0; /* Soft warm background */
     }
     header {
       text-align: center;
       padding: 20px 0 30px;
-      background: #c0392b;  /* Red accent – change if preferred */
-      color: white;
-      border-radius: 8px 8px 0 0;
     }
     header img {
       max-width: 100%;
       height: auto;
-      width: 400px;  /* Adjust this number to resize (e.g., 350px smaller, 500px larger) */
+      width: 400px;          /* ← adjust this to make logo bigger/smaller */
       display: block;
-      margin: 0 auto 15px auto;
+      margin: 0 auto 20px auto;
     }
-    h1, h2 {
-      margin: 0.4em 0;
+    h1 {
+      color: #c0392b;        /* Red accent */
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    h2 {
+      color: #e67e22;        /* Orange accent */
+      margin: 35px 0 15px;
+      font-size: 1.8rem;
+      border-left: 6px solid #e67e22;
+      padding-left: 12px;
     }
     .item {
       margin-bottom: 28px;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .item-name {
       font-weight: bold;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
+      color: #431407;
     }
     .price {
       color: #e74c3c;
       font-weight: bold;
       margin-left: 8px;
     }
-    /* Add your other menu styles here from previous versions if needed */
+    .description {
+      margin: 6px 0;
+      color: #444;
+    }
+    ul.options {
+      margin: 8px 0 8px 20px;
+      padding-left: 0;
+      list-style: none;
+    }
+    ul.options li {
+      margin-bottom: 4px;
+      position: relative;
+      padding-left: 20px;
+    }
+    ul.options li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #e67e22;
+      font-size: 1.4rem;
+    }
+    .small {
+      font-size: 0.95rem;
+      color: #666;
+      font-style: italic;
+    }
+    .highlight {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+    .add-ons {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
@@ -57,21 +110,85 @@
   </header>
 
   <main>
-    <!-- Paste your full Thursday menu content here (Chilaquiles, Tortas, etc.) -->
-    <!-- Example placeholder – replace with your actual items -->
+
     <section class="item">
       <div class="item-name">Chilaquiles!! <span class="price">$12</span></div>
-      <div>Red or Green – Rice, Beans, Cesina or 2 Eggs</div>
+      <div class="description">Red or Green</div>
+      <ul class="options">
+        <li>Rice, Beans, Cesina or 2 Eggs</li>
+      </ul>
       <div class="small">*on side: onion, cheese, sour cream, lettuce optional*</div>
     </section>
 
-    <!-- Add more sections as needed... -->
+    <section class="item">
+      <div class="item-name">Tortas! <span class="price">$10</span></div>
+      <div class="description">Light Mayo, Pinto Beans, Choice of Meat, Lettuce, Onion, Tomatoes, Avocado</div>
+      <ul class="options">
+        <li>Ham</li>
+        <li>Chorizo</li>
+        <li>Chicken</li>
+        <li>Asada</li>
+        <li>Al Pastor</li>
+      </ul>
+    </section>
+
+    <section class="item">
+      <div class="item-name">Pambazos! 🔥 <span class="price">$8–$10</span></div>
+      <div class="description">Telera coated in guajillo salsa (lightly fried), inside Potato/Chorizo (Original) or choice of meat, shredded lettuce, sour cream, cheese and green salsa</div>
+      <ul class="options">
+        <li>Chorizo con Papa <span class="price">$10</span></li>
+        <li>Chorizo Only <span class="price">$12</span></li>
+        <li>Pollo <span class="price">$10</span></li>
+        <li>Asada <span class="price">$12</span></li>
+        <li>Al Pastor <span class="price">$10</span></li>
+      </ul>
+      <div class="add-ons">*add ons* fried pinto beans</div>
+    </section>
+
+    <section class="item">
+      <div class="item-name">Burritos! <span class="price">$10</span></div>
+      <div class="description">Flour Tortilla, orange Spanish rice, fried pinto beans, choice of meat, cilantro, onion and green or red salsa</div>
+      <div class="add-ons small">*add ons* Pico de Gallo, Oaxaca Cheese, Sour Cream, Powder Cotija Cheese, Lettuce</div>
+      <ul class="options">
+        <li>Chorizo</li>
+        <li>Chicken</li>
+        <li>Asada</li>
+        <li>Al Pastor</li>
+      </ul>
+    </section>
+
+    <h2>Handmade!</h2>
+
+    <section class="item">
+      <div class="item-name">Tacos <span class="price">$2 each</span> • Sopes <span class="price">4 for $15</span> • Quesadillas <span class="price">4 for $15</span></div>
+      <div class="small">Regular Tacos also available <span class="price">$1 each</span></div>
+      <ul class="options">
+        <li>Chorizo</li>
+        <li>Chicken</li>
+        <li>Asada</li>
+        <li>Al Pastor</li>
+      </ul>
+    </section>
+
+    <section class="item">
+      <div class="item-name highlight">Fried Tacos or Flautas (Popular Item) <span class="price">6 for $10</span></div>
+      <div class="item-name highlight">Quesadillas Fried (Popular Item) <span class="price">6 for $10</span></div>
+      <div>Chorizo/Potato or Chicken</div>
+    </section>
+
+    <h2>Drinks</h2>
+    <section class="item">
+      <ul class="options">
+        <li>Agua Fresca: Jamaica</li>
+        <li>Canned: Coke, Sprite, Squirt</li>
+      </ul>
+    </section>
 
   </main>
 
-  <footer style="text-align:center; margin-top:40px; color:#666;">
+  <footer>
     <p>Pick Up or Delivery (+$5)</p>
-    <p>Questions? Let me know!</p>
+    <p style="margin-top: 12px;">Let me know if you have any questions, concerns or need accommodations!</p>
   </footer>
 
 </body>
